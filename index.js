@@ -62,7 +62,22 @@ const Kelas= mongoose.model('Kelas', kelasSchema) //model digunakan untuk membua
 
 
 //mencari data (find) didalam collection, mencari semua data
-Kelas.find((err, data)=>{
+// Kelas.find((err, data)=>{
+//     if(err) return console.log(err)
+
+//     console.log(data)
+// })
+
+//digunakan untuk mencari data dengan key tertentu
+// Kelas.findOne({judul:'nodejs'},(err, data)=>{
+//     if(err) return console.log(err)
+
+//     console.log(data)
+// })
+
+
+//mencari didalam judul yang memiliki huruf js pencarian spesifik
+Kelas.find({judul:/js/},(err, data)=>{
     if(err) return console.log(err)
 
     console.log(data)
