@@ -50,12 +50,20 @@ const Kelas= mongoose.model('Kelas', kelasSchema) //model digunakan untuk membua
 //*******************************//
 //              Metode 2         //
 //*******************************//
-Kelas.create({
-    judul:'vuejs',
-    deskripsi: 'Instansiasi vuejs'
-}, (error, data)=> {
-    if(error) return console.log(error)
+// Kelas.create({
+//     judul:'vuejs',
+//     deskripsi: 'Instansiasi vuejs'
+// }, (error, data)=> {
+//     if(error) return console.log(error)
+
+//     console.log(data)
+//     console.log('success created data')
+// })
+
+
+//mencari data (find) didalam collection, mencari semua data
+Kelas.find((err, data)=>{
+    if(err) return console.log(err)
 
     console.log(data)
-    console.log('success created data')
 })
