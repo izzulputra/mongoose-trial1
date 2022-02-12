@@ -77,7 +77,14 @@ const Kelas= mongoose.model('Kelas', kelasSchema) //model digunakan untuk membua
 
 
 //mencari didalam judul yang memiliki huruf js pencarian spesifik
-Kelas.find({judul:/js/},(err, data)=>{
+// Kelas.find({judul:/js/},(err, data)=>{
+//     if(err) return console.log(err)
+
+//     console.log(data)
+// })
+
+//find by ID
+Kelas.findById("62076141eadc67090df648e1",(err, data)=>{
     if(err) return console.log(err)
 
     console.log(data)
